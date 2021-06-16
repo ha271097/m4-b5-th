@@ -1,6 +1,7 @@
 package controller;
 
 import model.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import service.ICustomerService;
 @RequestMapping("/customers")
 public class CustomerController {
 //CustomerServiceORM serviceORM = new CustomerServiceORM();
+    @Autowired
     private ICustomerService customerService;
     @GetMapping("")
     public ModelAndView home(){

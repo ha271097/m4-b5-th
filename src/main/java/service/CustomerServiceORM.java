@@ -3,11 +3,12 @@ package service;
 import model.Customer;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
-
+@Service
 public class CustomerServiceORM implements ICustomerService{
     @Autowired
     private EntityManager entityManager;
