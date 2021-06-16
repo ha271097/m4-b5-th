@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class CustomerServiceORM {
+public class CustomerServiceORM implements ICustomerService{
     @Autowired
     private EntityManager entityManager;
 

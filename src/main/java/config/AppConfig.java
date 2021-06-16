@@ -16,6 +16,8 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
+import service.CustomerServiceORM;
+import service.ICustomerService;
 
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -87,9 +89,9 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }
-
-
-
-
-
+    @Bean
+    public ICustomerService getCustomerServiceOrm(){
+//        CustomerServiceORM customerServiceORM = new CustomerServiceORM();
+        return new CustomerServiceORM();
+    }
 }
